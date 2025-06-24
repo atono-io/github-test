@@ -1,0 +1,20 @@
+name: PR 5-Min Fail Job for 'fail' Branches
+
+on:
+  pull_request:
+    branches:
+      - main  # or your default target branch
+    types: [opened, synchronize, reopened]
+
+jobs:
+  run-if-branch-has-fail:
+    if: contains(github.head_ref, 'fail')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sleep for 5 minutes
+        run: sleep 300
+
+      - name: Fail on purpose
+        run: |
+          echo "❌ Failing the job after 5 minutes for branch '${{ github.head_ref }}'"
+          exit 1
