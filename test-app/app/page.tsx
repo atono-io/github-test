@@ -97,7 +97,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image src="/window.svg" alt="Examples" width={16} height={16} />
-          Examples
+          Examples of next.js
         </a>
         <a
           className="flex items-center gap-2 hover:underline"
