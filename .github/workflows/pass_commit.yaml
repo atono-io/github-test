@@ -1,0 +1,18 @@
+name: PR 5-Min Pass Job for 'pass' Commits
+
+on:
+  pull_request:
+    branches:
+      - main  # or your default branch
+    types: [opened, synchronize, reopened]
+
+jobs:
+  run-if-commit-has-pass:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.head.commit.message, 'pass')
+    steps:
+      - name: Sleep for 5 minutes
+        run: sleep 300
+
+      - name: Done
+        run: echo "✅ Passed after 5 minutes due to commit: ${{ github.event.pull_request.head.commit.message }}"
