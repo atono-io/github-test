@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useRef, useState } from 'react';
+import Head from 'next/head';
 
 export default function SpaceInvaders() {
   const canvasRef = useRef(null);
@@ -98,6 +100,9 @@ export default function SpaceInvaders() {
 
   return (
     <div className="flex flex-col items-center p-4">
+      <Head>
+        <title>Space Invaders</title>
+      </Head>
       <h1 className="text-2xl font-bold text-white mb-4">Space Invaders</h1>
       <canvas ref={canvasRef} width={canvasWidth} height={canvasHeight} className="bg-black rounded" />
     </div>
