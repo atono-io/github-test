@@ -30,7 +30,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            🚀 Deploy Now
+            🚀 Deploy Now To?
           </a>
           <a
             className="rounded-full border border-gray-400 dark:border-gray-600 px-6 py-3 text-sm sm:text-base font-medium hover:bg-gray-200 dark:hover:bg-gray-800 transition"
