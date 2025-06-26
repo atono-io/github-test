@@ -112,7 +112,7 @@ export default function Home() {
   href="/snakeGame"
   className="rounded-full bg-green-600 text-white px-6 py-3 text-sm sm:text-base font-medium hover:bg-green-500 transition"
 >
-  🎮 Play Snake Game For Free
+  🎮 Play Snake Game 
 </a>
       </footer>
     </div>
